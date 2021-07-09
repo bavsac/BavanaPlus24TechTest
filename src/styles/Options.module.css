@@ -1,0 +1,11 @@
+.Options{
+
+}
+
+.Options__list{
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+}

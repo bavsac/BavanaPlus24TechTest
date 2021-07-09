@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Heading from './components/Heading';
+import Options from './components/Options'
+import SelectedOptions from './components/SelectedOptions'
+import Coffee from './components/Coffee'
 
 function App() {
+  const [optionsList, setOptionsList] = useState([
+    { name: 'milk', selected: true },
+    { name: 'sugar', selected: false },
+    { name: 'sprinkles', selected: true },
+    { name: 'coco powder', selected: true },
+    { name: 'cinnamon', selected: true },
+    { name: 'make it Irish', selected: true },
+    { name: 'add another shot', selected: true },
+  ]);
+  const [selectedOptions, setSelectedOptions] = useState([]);
+  const [showSelection, setShowSelection] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Heading />
+      
+      <Options  optionsList={optionsList} setSelectedOptions={setSelectedOptions} setShowSelection={setShowSelection}/>
+      <SelectedOptions selectedOptions={selectedOptions}/>
+      <Coffee showSelection={showSelection}/>
     </div>
   );
 }

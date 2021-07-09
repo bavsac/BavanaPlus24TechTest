@@ -1,4 +1,11 @@
 # Getting Started with Create React App
+## Instructions to make the app ##
+
+The task is to create a very simple coffee machine app, with the following functionality:
+1. Store coffee - can keep this simple and hard-coded as an object
+2. Store options i.e. sugar, milk etc. - same as above, just keep simple.
+3. Allow the user to make selections (coffee and any options) and submit the form which should deduct from the coffee and options.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
